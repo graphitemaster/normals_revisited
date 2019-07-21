@@ -75,7 +75,7 @@ This tells us something rather interesting
 
 The `transpose(inverse(M))` is missing the _sign_ from `det(M)` and that's why the normal is oriented the wrong way when `det(M) < 0`.
 
-What we're actually interested in using is the cofactor instead of `transpose(inverse(M))`, which has the added benefit of being more efficent in addition to being accurate for handedness changes of `M`.
+What we're actually interested in using is the cofactor instead of `transpose(inverse(M))`, which has the added benefit of being more efficent to compute and more accurate.
 
 ## Insight to be had
 We should **not** be deriving the normal from the **dot product** because it leads to precisely this problem. Derive it from the **cross product** and teach the derivation of it using the **cross product**.
