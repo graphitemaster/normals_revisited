@@ -23,6 +23,10 @@ Lets take a look at the derivation with the **dot product** to see what is actua
 
 ![](tex/img3.png)
 
+We arrive to that by using this identity
+
+![](tex/img1.png)
+
 From the above we see that we need `transpose(inverse(M))`
 In front of `N` in order to preserve orthogonality.
 
