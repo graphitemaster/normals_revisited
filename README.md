@@ -21,32 +21,32 @@ max(0, dot(n, l)) = 0
 
 Lets take a look at the derivation with the **dot product** to see what is actually happening here
 
-![](tex/img3.png)
+![](tex/img3.png#)
 
 We arrive to that by using this identity
 
-![](tex/img1.png)
+![](tex/img1.png#)
 
 From the above we see that we need `transpose(inverse(M))`
 In front of `N` in order to preserve orthogonality.
 
-![](tex/img4.png)
+![](tex/img4.png#)
 
 What is not so obvious here is that
 
-![](tex/img5.png)
+![](tex/img5.png#)
 
 Has more than one solution and orientation isn't considered. This is easy to show.
 
-![](tex/img6.png)
+![](tex/img6.png#)
 
-When the normal is not zero and the triangle isn't degenerate you get
+When the normal is not zero `(|N| != 0)` and the triangle isn't degenerate `(|V| != 0)` you get
 
-![](tex/img7.png)
+![](tex/img7.png#)
 
 Which means when you have `M` such that
 
-![](tex/img8.png)
+![](tex/img8.png#)
 
 Then you will get a normal that points in the completely opposite direction.
 
@@ -54,17 +54,17 @@ Then you will get a normal that points in the completely opposite direction.
 
 So what happens if we derive the normal from the **cross product** of three vertices instead?
 
-![](tex/img9.png)
+![](tex/img9.png#)
 
 Then we apply `M` to the vertices to get something more interesting
 
-![](tex/img10.png)
+![](tex/img10.png#)
 
 Where `cof` here is the [_cofactor_](https://en.wikipedia.org/wiki/Minor_(linear_algebra))
 
 This tells us something rather interesting
 
-![](tex/img11.png)
+![](tex/img11.png#)
 
 The `transpose(inverse(M))` is missing the _sign_ from `det(M)` and that's why the normal is oriented the wrong way when `det(M) < 0`.
 
