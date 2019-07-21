@@ -1,6 +1,6 @@
 # The details of transforming normals
 
-Have you ever seen `normal * transpose(inverse(M))` in code before when transforming normals?
+Have you ever seen `transpose(inverse(M)) * normal` in code before when transforming normals?
 
 This is the defacto solution to dealing with non-uniform scale or skewed models when transforming normals and it's such an accepted practice that nearly every single graphics programming resource mentions and encourages it. The problem is it's _wrong_.
 
