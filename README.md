@@ -81,7 +81,7 @@ What we're actually interested in using is the cofactor instead of `transpose(in
 We should **not** be deriving the normal from the **dot product** because it leads to precisely this problem. Derive it from the **cross product** and teach the derivation of it using the **cross product**.
 
 ## Sample code
-Included here is some sample C code for calculating the cofactor of a 4x4 matrix which can be used instead of `inverse(transpose(M))`
+Included here is some sample C code for calculating the cofactor of a 4x4 matrix which can be used instead of `transpose(inverse(M))`
 
 ```c
 float minor(const float m[16], int r0, int r1, int r2, int c0, int c1, int c2) {
