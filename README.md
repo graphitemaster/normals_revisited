@@ -5,17 +5,6 @@ Have you ever seen `transpose(inverse(M)) * normal` in code before when transfor
 This is the defacto solution to dealing with non-uniform scale or skewed models when transforming normals and it's such an accepted practice that nearly every single graphics programming resource mentions and encourages it. The problem is it's _wrong_.
 
 ## How did we get here?
-
-You may have noticed that `inverse(transpose(M))` is the same as `transpose(inverse(M))`.
-
-![](tex/img0.png)
-
-This proves that the inverse of `A^T` is `(A^-1)^T`.
-
-Which follows from the identity
-
-![](tex/img1.png)
-
 A geometric normal is fully defined by its orientation with respect to a surface and the fact that it's orthogonal / perpendicular to the tangent plane at the surface point.
 
 When transforming a normal we want something that preserves both of those constraints. The inverse transpose matrix used to transform the normal is derived from satisfying just the latter. That is, the **dot product** should equal zero. What we should be using instead is the **cross product** as it enforces both.
