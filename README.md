@@ -24,7 +24,7 @@ Not easily persuaded? Take this very simple triangle
 
 ![](tex/img2.png)
 
-Now reflect it around the `zy` axis. You'll note that the normal does not reflect properly. In fact, the normal points in the culled direction. Now all your lighting calculations end up as
+Now reflect it around the `zy` axis. You'll note that the normal does not reflect properly if `transpose(inverse(M))` is used to transform it. In fact, the normal points in the culled direction. Now all your lighting calculations end up as
 
 ```glsl
 max(0, dot(n, l)) = 0
